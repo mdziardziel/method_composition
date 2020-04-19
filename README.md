@@ -41,7 +41,7 @@ print Alphabet.call('alphabet: ')
 > alphabet: abcdefg
 ```
 
-You can also define many classes and combine them together, e.g.
+You can also define many classes and combine them together using function composition from ruby, e.g.
 ```
 class Alphabet
   include MethodComposition
@@ -94,4 +94,8 @@ end
 
 # first element on the left has to bee proc
 (proc { |x| x } << Printer << Numbers << Printer << Alphabet).call('alphabet: ', 2)
+> alphabet: abcabcdefg
+  gfedcbacba :tebahpla
+  gfedcbacba :tebahpla1234
+  4321alphabet: abcabcdefg
 ```
