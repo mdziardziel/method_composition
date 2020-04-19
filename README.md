@@ -1,4 +1,5 @@
-# method_composition
+# method composition
+Easily build classes based on function composition well known e.g. from elixir.
 
 ## usage
 1. create class, e.g. Alphabet an define methods
@@ -16,23 +17,7 @@ class Alphabet
   end
 end
 ```
-2. include MethodComposition module
-```
-class Alphabet
-  include MethodComposition
-
-  private
-
-  def abc(alph)
-    alph << 'abc'
-  end
-
-  def defg(alph)
-    alph << 'defg'
-  end
-end
-```
-3. define order in which methods will be called
+2. include MethodComposition module and define order in which methods will be called
 ```
 class Alphabet
   include MethodComposition
@@ -50,9 +35,10 @@ class Alphabet
   end
 end
 ```
-4. call class and check if it works
+3. call class and check if it works
 ```
 print Alphabet.call('alphabet: ')
+> alphabet: abcdefg
 ```
 
 You can also define many classes and combine them together, e.g.
